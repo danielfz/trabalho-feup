@@ -1,13 +1,22 @@
 #include "classes.h"
+#include <ostream>
 
-std::string Pessoa::getNome() const  { return mNome; }
-int         Pessoa::getId() const    { return mId; }
-std::string Pessoa::getEmail() const { return mEmail; }
-
-ostream& operator<<(ostream& os,const Pessoa& p) {
-    return os << p.getId << ", " 
-        << p.getmNome << ", "
-        << p.mEmail
-        << std::endl;
+std::ostream& operator<<(std::ostream& os,const Pessoa& p) {
+    return os << p.mId << ", " << p.mNome << ", " << p.mEmail << std::endl;
 }
 
+
+Pessoa::Pessoa(std::string nome,int id,std::string email) :
+    mNome{nome},mId{id},mEmail{email}
+{
+}
+
+Aluno::Aluno(std::string nome,int id,std::string email,int anoInscricao) :
+    Pessoa{nome,id,email},mAnoInscricao{anoInscricao}
+{
+}
+
+Docente::Docente(std::string nome,int id,std::string email) :
+    Pessoa{nome,id,email}
+{
+}

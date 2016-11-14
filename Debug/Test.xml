@@ -1,0 +1,9 @@
+<testsuites>
+	<testsuite name="AllTests" tests="1">
+		<testcase classname="AllTests" name="test1">
+			<failure message="../src/Test.cpp:11 test1: test 1">
+test1: test 1
+			</failure>
+		</testcase>
+	</testsuite>
+</testsuites>

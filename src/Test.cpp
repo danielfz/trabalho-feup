@@ -5,22 +5,22 @@
 
 #include "Feup.h"
 
-void thisIsATest() {
-	ASSERTM("this is a test", true);	
-}
-
 void test1() {
-    Feup feup("mieic.csv");
-	ASSERTM("test 1", true);	
+    std::cout << "test1\n";
+    Feup feup("../resources/mieic.csv");
 }
 
-void runAllTests(int argc, char const *argv[]){
+bool runAllTests(int argc, char const *argv[]){
 	cute::suite s;
-	//TODO add your test here
-	s.push_back(CUTE(thisIsATest));
+	s.push_back(CUTE(test1));
 	cute::xml_file_opener xmlfile(argc,argv);
 	cute::xml_listener<cute::ide_listener<> >  lis(xmlfile.out);
-	cute::makeRunner(lis,argc,argv)(s, "AllTests");
+    std::cout << "tests\n";
+    auto runner = cute::makeRunner(lis,argc,argv);
+	bool success = runner(s,"AllTests");
+
+    //test1();
+    return success;
 }
 
 
