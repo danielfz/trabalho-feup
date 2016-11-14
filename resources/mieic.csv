@@ -1,0 +1,60 @@
+OB;1;PRI;MDIS;EIC0011;Matemática Discreta;6
+OB;1;PRI;AOCO;EIC0083;Arquitectura e Organização de Computadores;6
+OB;1;PRI;FPRO;EIC0005;Fundamentos da Programação;6
+OB;1;PRI;AMAT;EIC0004;Análise Matemática;6
+OB;1;PRI;ALGE;EIC0003;Álgebra;4;5
+OB;1;PRI;PF;FEUP002;Projeto FEUP;1.5
+OB;1;SEG;MEST;EIC0105;Métodos Estatísticos;4.5
+OB;1;SEG;PROG;EIC0012;Programação;7.5
+OB;1;SEG;FISI1;EIC0010;Física I;6
+OB;1;SEG;CMAT;EIC0009;Complementos de Matemática;6
+OB;1;SEG;MPCP;EIC0016;Microprocessadores e Computadores Pessoais;6
+OB;2;PRI;TCOM;EIC0022;Teoria da Computação;6
+OB;2;PRI;MNUM;EIC0021;Métodos Numéricos;4.5
+OB;2;PRI;FISI;EIC00142;Física II;6
+OB;2;PRI;AEDA;EIC0013;Algoritmos e Estruturas de Dados;7.5
+OB;2;PRI;LCOM;EIC0020;Laboratório de Computadores;6
+OB;2;SEG;BDAD;EIC0023;Bases de Dados;6
+OB;2;SEG;CAL;EIC0110 ;Concepção e Análise de Algoritmos;6
+OB;2;SEG;CGRA;EIC0019;Computação Gráfica;6
+OB;2;SEG;SOPE;EIC0027;Sistemas Operativos;6
+OB;2;SEG;LPOO;EIC0111;Laboratório de Programação Orientada por Objectos;6
+OB;3;PRI;PLOG;EIC0026;Programação em Lógica;4.5
+OB;3;PRI;LAIG;EIC0084;Laboratório de Aplicações com Interface Gráfica;7.5
+OB;3;PRI;ESOF;EIC0024;Engenharia de Software;6
+OB;3;PRI;RCOM;EIC0032;Redes de Computadores;6
+OB;3;PRI;LTW;EIC0112;Linguagens e Tecnologias Web;6
+OB;3;SEG;LBAW;EIC0085;Laboratório de Bases de Dados e Aplicações Web;7.5
+OB;3;SEG;IART;EIC0029;Inteligência Artificial;6
+OB;3;SEG;COMP;EIC0028;Compiladores;6
+OB;3;SEG;SDIS;EIC0036;Sistemas Distribuídos;6
+OB;3;SEG;PPIN;EIC0031;Proficiência Pessoal e Interpessoal;4.5
+OB;4;PRI;SINF;IC0040;Sistemas de Informação;6
+OB;4;PRI;LDSO;IC0086;Laboratório de Desenvolvimento de Software;7.5
+OB;4;PRI;GEMP;IC0034;Gestão de Empresas;4.5
+OB;4;PRI;AIAD;IC0033;Agentes e Inteligência Artificial Distribuída;6
+OB;4;PRI;MFES;IC0039;Métodos Formais em Engenharia de Software;6
+OB;4;SEG;IOPE;IC0037;Investigação Operacional;4.5
+OB;4;SEG;LGPR;IC0106;Laboratório de Gestão de Projectos;7.5
+OP;5;PRI;APIN;IC0044;Análise de Projectos de Investimento;6;30
+OP;5;PRI;ADAD;IC0046;Armazéns de Dados;6;30
+OP;5;PRI;AACO;IC0049;Arquitecturas Avançadas de Computadores;6;30
+OP;5;PRI;CMOV;IC0050;Computação Móvel;6;30
+OP;5;PRI;DAPI;IC0108;Descrição, Armazenamento e Pesquisa de Informação;6;30
+OP;5;PRI;ECAC;IC0096;Extracção de Conhecimento e Aprendizagem Computacional;6;30
+OP;5;PRI;GQUA;IC0109;Gestão da Qualidade;6;30
+OP;5;PRI;GIEM;IC0097;Gestão de Informação Empresarial;6;30
+OP;5;PRI;IPCO;IC0057;Interacção Pessoa-Computador;6;30
+OP;5;PRI;MADS;IC0062;Metodologias Ágeis de Desenvolvimento de Software;6;30
+OP;5;PRI;PESI;IC0067;Planeamento Estratégico de Sistemas de Informação;6;30
+OP;5;PRI;PFAL;IC0068;Processamento da Fala;6;30
+OP;5;PRI;RVAU;IC0070;Realidade Virtual e Aumentada;6;30
+OP;5;PRI;ROBO;IC0071;Robótica;6;30
+OP;5;PRI;SSIN;IC0072;Segurança em Sistemas Informáticos;6;30
+OP;5;PRI;SESI;IC0099;Seminário de Engenharia de Software e Sistemas de Informação;6;30
+OP;5;PRI;SRTI;IC0100;Seminário de Redes e Tecnologias da Informação;6;30
+OP;5;PRI;SSIM;IC0101;Seminário de Sistemas Inteligentes, Interacção e Multimédia;6;30
+OP;5;PRI;SRSI;IC0092;Serviços de Rede e de Sistema;6;30
+OP;5;PRI;SADE;IC0074;Sistemas de Apoio à Decisão;6;30
+OP;5;PRI;TVVS;IC0113;Teste, Verificação e Validação de Software;6;30
+OP;5;PRI;VCOM;IC0104;Visão por Computador;6;30
