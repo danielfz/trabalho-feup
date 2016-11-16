@@ -1,5 +1,6 @@
 #include "classes.h"
 #include <ostream>
+#include <iostream>
 
 using namespace std;
 
@@ -7,20 +8,22 @@ using namespace std;
  * Pessoa
  */
 
-Pessoa::Pessoa(string nome,string id,string email) :
-    mNome{nome},mId{id},mEmail{email}
+Pessoa::Pessoa(string nome, int id, string email)
 {
+	this->mNome=nome;
+	this->mId=id;
+	this->mEmail=email;
 }
 
-string Pessoa:getNome() const{
+string Pessoa::getNome() const{
 	return mNome;
 }
 
-string Pessoa:getId() const{
+int Pessoa::getId() const{
 	return mId;
 }
 
-string Pessoa:getEmail() const{
+string Pessoa::getEmail() const{
 	return mEmail;
 }
 
@@ -28,12 +31,12 @@ string Pessoa:getEmail() const{
  * Docente
  */
 
-Docente::Docente(string nome,string id,string email) :
-    Pessoa{nome,id,email}
+Docente::Docente(string nome, int id, string email) :
+    Pessoa(nome,id,email)
 {
 }
 
-void mostrarAlunos(){
+void Docente::mostrarAlunos() const{
 	for(unsigned int i=0; i<alunos.size(); i++){
 		cout << alunos[i].getNome() << endl;
 	}
@@ -43,13 +46,15 @@ void mostrarAlunos(){
  * Aluno
  */
 
-Aluno::Aluno(string nome,string id,string email,int anoInscricao) :
-    Pessoa(nome,id,email),mAnoInscricao{anoInscricao}
+Aluno::Aluno(string nome, int id,string email,int anoInscricao) :
+    Pessoa(nome,id,email)
 {
+	this->mAnoInscricao=anoInscricao;
+	this->mCreditos=75;
 }
 
 int Aluno::getAno() const{
-	return mAno;
+	return mAnoInscricao;
 }
 
 string Aluno::getEstatuto() const{
@@ -59,3 +64,4 @@ string Aluno::getEstatuto() const{
 int Aluno::getCreditos() const{
 	return mCreditos;
 }
+

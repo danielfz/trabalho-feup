@@ -15,19 +15,19 @@ class Pessoa {
     int mId;
     std::string mEmail;
 
-protected:
-    Pessoa(std::string nome,std::string id,std::string email);
+public:
+    Pessoa(std::string nome, int id,std::string email);
     std::string getNome() const;
     int getId() const;
     std::string getEmail() const;
+    void getInfo() const;
 };
 
 class Docente : public Pessoa {
-
-	vector<*Aluno> alunos;
-public:
-    Docente(std::string nome,std::string mId,std::string email);
-    void mostrarEstudantes() const;
+	std::vector<*Aluno> alunos;
+	public:
+    Docente(std::string nome, int mId, std::string email);
+    void mostrarAlunos() const;
 };
 
 class Aluno : public Pessoa {
@@ -35,7 +35,7 @@ class Aluno : public Pessoa {
     std::string mEstatuto;
     int mCreditos;
 public:
-    Aluno(std::string nome,std::string id,std::string email,int anoInscricao);
+    Aluno(std::string nome,int id,std::string email,int anoInscricao);
     int getAno() const;
     std::string getEstatuto() const;
     int getCreditos() const;
