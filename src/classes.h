@@ -17,11 +17,17 @@ class Pessoa {
 
 protected:
     Pessoa(std::string nome,std::string id,std::string email);
+    std::string getNome() const;
+    int getId() const;
+    std::string getEmail() const;
 };
 
 class Docente : public Pessoa {
-    public:
+
+	vector<*Aluno> alunos;
+public:
     Docente(std::string nome,std::string mId,std::string email);
+    void mostrarEstudantes() const;
 };
 
 class Aluno : public Pessoa {
@@ -30,7 +36,9 @@ class Aluno : public Pessoa {
     int mCreditos;
 public:
     Aluno(std::string nome,std::string id,std::string email,int anoInscricao);
-    //bool InscreverAluno()
+    int getAno() const;
+    std::string getEstatuto() const;
+    int getCreditos() const;
 };
 
 /*******************************
