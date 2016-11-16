@@ -4,8 +4,6 @@
 #include <sstream>
 #include <iostream>
 
-char Uc::sep;
-
 /*
 * UC
 */

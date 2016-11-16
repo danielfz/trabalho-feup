@@ -6,17 +6,17 @@ std::ostream& operator<<(std::ostream& os,const Pessoa& p) {
 }
 
 
-Pessoa::Pessoa(std::string nome,int id,std::string email) :
+Pessoa::Pessoa(std::string nome,std::string id,std::string email) :
     mNome{nome},mId{id},mEmail{email}
 {
 }
 
-Aluno::Aluno(std::string nome,int id,std::string email,int anoInscricao) :
-    Pessoa{nome,id,email},mAnoInscricao{anoInscricao}
+Aluno::Aluno(std::string nome,std::string id,std::string email,int anoInscricao) :
+    Pessoa(nome,id,email),mAnoInscricao{anoInscricao}
 {
 }
 
-Docente::Docente(std::string nome,int id,std::string email) :
+Docente::Docente(std::string nome,std::string id,std::string email) :
     Pessoa{nome,id,email}
 {
 }

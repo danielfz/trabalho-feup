@@ -12,8 +12,7 @@ class Docente;
 class Feup
 {
     public:
-
-        Feup(std::string fUcs,fAlunos);
+        Feup(std::string fUcs,std::string fAlunos);
 
         bool addAluno(Aluno*);
         bool addDocente(Docente*);
@@ -29,14 +28,12 @@ class Feup
         void listAlunos() const;
         void listUcs() const;
 
-        static const char SEP = ';';
-
     private:
         std::vector<Uc*> mUcs;
         std::vector<Uc*> mAlunos;
         std::vector<Uc*> mDocentes;
 
-        void readUcFile(std::string);
+        void readUcsFile(std::string);
         void readPessoasFile(std::string);
         void readInscricoesFile(std::string);
 };

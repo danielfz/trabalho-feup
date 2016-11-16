@@ -32,22 +32,20 @@ static std::ifstream& getlineSkipEmptyLines(std::ifstream& fs,std::string& l) {
 }
 
 
-Feup::Feup(std::string fich)
+Feup::Feup(const std::string fUcs,const std::string fAlunos)
 {
-    readUcFile(fich);
+    readUcsFile(fUcs);
     listUcs();
 
     /*
-    readPessoasFile(fich);
+    readPessoasFile(fAlunos);
     listPessoas();
 
     readIncricoesFile(fich);
     */
 }
 
-void Feup::readUcFile(std::string fich) {
-    Uc::setSeparator(Feup::SEP);
-
+void Feup::readUcsFile(const std::string fich) {
     std::ifstream fs;
     fs.open(fich);
     std::cout << "feup: opening " << fich << std::endl;
@@ -64,10 +62,39 @@ void Feup::readUcFile(std::string fich) {
     fs.close();
 }
 
-void Feup::readPessoasFile(std::string fich) {
+void Feup::readPessoasFile(const std::string fich) {
+    std::ifstream fs;
+    fs.open(fich);
+    std::cout << "feup: opening " << fich << std::endl;
+    if (!fs.is_open()) {
+        std::cout << "error opening file\n";
+        return;
+    }
+
+    std::string line;
+    while (getlineSkipEmptyLines(fs,line)) {
+        Uc* ucp = Uc::newUc(line);
+        addUc(ucp);
+    }
+    fs.close();
 }
 
+
 void Feup::readInscricoesFile(std::string fich) {
+    std::ifstream fs;
+    fs.open(fich);
+    std::cout << "feup: opening " << fich << std::endl;
+    if (!fs.is_open()) {
+        std::cout << "error opening file\n";
+        return;
+    }
+
+    std::string line;
+    while (getlineSkipEmptyLines(fs,line)) {
+        Uc* ucp = Uc::newUc(line);
+        addUc(ucp);
+    }
+    fs.close();
 }
 
 

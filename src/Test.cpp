@@ -7,10 +7,10 @@
 
 void test1() {
     std::cout << "test1\n";
-    Feup feup("../resources/mieic.csv");
+    Feup feup("../resources/mieic.csv","../resources/pessoas.csv");
 }
 
-bool runAllTests(int argc, char const *argv[]){
+bool runAllTests(int argc, char const *argv[]) {
 	cute::suite s;
 	s.push_back(CUTE(test1));
 	cute::xml_file_opener xmlfile(argc,argv);
