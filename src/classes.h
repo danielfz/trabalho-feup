@@ -11,12 +11,11 @@ const char sep = ';';
  *********************/
 
 class Pessoa {
-    public:
-    const std::string mNome;
-    const std::string mId;
-    const std::string mEmail;
+    std::string mNome;
+    int mId;
+    std::string mEmail;
 
-    protected:
+protected:
     Pessoa(std::string nome,std::string id,std::string email);
 };
 
@@ -26,11 +25,12 @@ class Docente : public Pessoa {
 };
 
 class Aluno : public Pessoa {
-    public:
-    const int mAnoInscricao;
-    const std::string mEstatuto;
-
+    int mAnoInscricao;
+    std::string mEstatuto;
+    int mCreditos;
+public:
     Aluno(std::string nome,std::string id,std::string email,int anoInscricao);
+    //bool InscreverAluno()
 };
 
 /*******************************
