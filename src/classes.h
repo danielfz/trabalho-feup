@@ -12,34 +12,42 @@ const char sep = ';';
 
 class Pessoa {
     std::string mNome;
-    int mId;
+    const int mId;
+    static int lastId;
     std::string mEmail;
 
 public:
-    Pessoa(std::string nome, int id,std::string email);
+    Pessoa(std::string nome, std::string email);
     std::string getNome() const;
     int getId() const;
     std::string getEmail() const;
-    void getInfo() const;
+    virtual std::string getInfo() const;
 };
 
+int Pessoa::lastId=0;
+
+
 class Docente : public Pessoa {
-	std::vector<*Aluno> alunos;
 	public:
     Docente(std::string nome, int mId, std::string email);
-    void mostrarAlunos() const;
 };
 
 class Aluno : public Pessoa {
     int mAnoInscricao;
     std::string mEstatuto;
     int mCreditos;
+    Docente *tutor;
 public:
     Aluno(std::string nome,int id,std::string email,int anoInscricao);
     int getAno() const;
     std::string getEstatuto() const;
     int getCreditos() const;
+    std::string getInfo() const;
 };
+
+
+
+
 
 /*******************************
  * Unidades Curriculares

@@ -1,6 +1,7 @@
 #include "classes.h"
 #include <ostream>
 #include <iostream>
+#include <sstream>
 
 using namespace std;
 
@@ -8,10 +9,9 @@ using namespace std;
  * Pessoa
  */
 
-Pessoa::Pessoa(string nome, int id, string email)
+Pessoa::Pessoa(string nome, string email): mId(lastId++)
 {
 	this->mNome=nome;
-	this->mId=id;
 	this->mEmail=email;
 }
 
@@ -27,27 +27,29 @@ string Pessoa::getEmail() const{
 	return mEmail;
 }
 
+string Pessoa::getInfo() const{
+	std::stringstream ss;
+	ss << mNome << ", " << mId << ", " << mEmail;
+	return ss.str();
+}
+
 /*
  * Docente
  */
 
 Docente::Docente(string nome, int id, string email) :
-    Pessoa(nome,id,email)
+    Pessoa(nome, email)
 {
 }
 
-void Docente::mostrarAlunos() const{
-	for(unsigned int i=0; i<alunos.size(); i++){
-		cout << alunos[i].getNome() << endl;
-	}
-}
+
 
 /*
  * Aluno
  */
 
 Aluno::Aluno(string nome, int id,string email,int anoInscricao) :
-    Pessoa(nome,id,email)
+    Pessoa(nome, email)
 {
 	this->mAnoInscricao=anoInscricao;
 	this->mCreditos=75;
@@ -65,3 +67,8 @@ int Aluno::getCreditos() const{
 	return mCreditos;
 }
 
+string Aluno::getInfo() const{
+	std::stringstream ss;
+	ss << Pessoa::getInfo() << "," << mAnoInscricao << ", " << mEstatuto << ", " << mCreditos << ", " << tutor;
+	return ss.str();
+}
