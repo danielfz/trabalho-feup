@@ -128,3 +128,20 @@ bool Feup::addDocente(Docente* novo){
 			return 0;
 	}
 }
+
+Pessoa* Feup::getPessoaPorNome(std::string nome){
+	for(unsigned int i=0; i<mDocentes.size(); i++){
+		if(mDocentes[i]->getNome()==nome) return mDocentes[i];
+	}
+	for(unsigned int i=0; i<mAlunos.size(); i++){
+			if(mAlunos[i]->getNome()==nome) return mAlunos[i];
+		}
+	return NULL;
+}
+
+Aluno* Feup::getAlunoPorNumero(int id){
+	for(unsigned int i=0; i<mAlunos.size(); i++){
+				if(mAlunos[i]->getId()==id) return mAlunos[i];
+			}
+	return NULL;
+}

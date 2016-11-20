@@ -21,7 +21,7 @@ class Feup
         bool addOrientador(Aluno*,Docente*);
 
         Pessoa* getPessoaPorNome(std::string);
-        Aluno* getAlunoPorNumero(std::string);
+        Aluno* getAlunoPorNumero(int);
         Uc* getUcPorNome(std::string);
         Uc* getUcPorCodigo(std::string);
 
