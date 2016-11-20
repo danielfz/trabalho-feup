@@ -30,8 +30,8 @@ class Feup
 
     private:
         std::vector<Uc*> mUcs;
-        std::vector<Uc*> mAlunos;
-        std::vector<Uc*> mDocentes;
+        std::vector<Aluno*> mAlunos;
+        std::vector<Docente*> mDocentes;
 
         void readUcsFile(std::string);
         void readPessoasFile(std::string);

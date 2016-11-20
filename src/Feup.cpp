@@ -110,3 +110,21 @@ void Feup::listUcs() const {
         std::cout << (*uc) << std::endl;
     }
 }
+
+bool Feup::addAluno(Aluno* novo){
+	for(unsigned int i=0; i<mAlunos.size(); i++){
+		if(novo==mAlunos[i]){
+			std::cout << "Este estudante já existe." <<  std::endl;
+			return 0;
+		}
+	}
+	mAlunos.push_back(novo);
+}
+
+bool Feup::addDocente(Docente* novo){
+	for(unsigned int i=0; i<mDocentes.size(); i++){
+		if(novo==mDocentes[i])
+			std::cout << "Este docente já existe." << std::endl;
+			return 0;
+	}
+}
